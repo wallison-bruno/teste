@@ -9,6 +9,9 @@
     nome: {
       type: db.Sequelize.STRING
     },
+    cep: {
+      type: db.Sequelize.STRING
+    },
     email: {
       type: db.Sequelize.STRING
     },
