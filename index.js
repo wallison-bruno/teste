@@ -131,7 +131,7 @@ app.post('/editar', autenticado, function (req, res) {
         if (req.body.senha != req.body.senha2) {
             erros.push({ texto: "As senhas estão diferentes!" })
         } else {
-            if (req.body.senha.length <= 3) {
+            if (req.body.senha.length <= 3 && req.body.senha != "") {
                 erros.push({ texto: "Senha muito curta!" })
             }
         }
