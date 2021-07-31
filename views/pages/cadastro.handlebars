@@ -1,0 +1,61 @@
+{{#each erros}}
+<div class="alert alert-danger">{{texto}}</div>
+{{/each}}
+
+<form class="row g-3" action="/adiciona" method="POST">
+  <h1>Cadastre-se</h1>
+  <div class="col-12">
+    <label for="impuntName" class="form-label">Nome completo</label>
+    <input name='nome' type="text" class="form-control" id="imputName" placeholder="Ex.: Bruno Moura">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">E-mail</label>
+    <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Ex.: teste@teste.com.br">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCpf" class="form-label">CPF</label>
+    <input name="cpf" type="text" onkeypress="$(this).mask('000.000.000-00');" placeholder="000.000.000-00"
+      class="form-control" id="inputCpf">
+  </div>
+  <div class="col-6">
+    <label for="inputAddress" class="form-label">Endereço</label>
+    <input name="endereco" type="text" class="form-control" id="inputAddress" placeholder="Ex.: Av. Castelo Branco">
+  </div>
+  <div class="col-3">
+    <label for="inputNunber" class="form-label">Número</label>
+    <input name="numero" type="number" min="1" max="99999" class="form-control" id="inputAddress2"
+      placeholder="Ex.: 1332">
+  </div>
+  <div class="col-3">
+    <label for="inputComplement" class="form-label">Completo</label>
+    <input name="complemento" type="text" class="form-control" id="inputComplement" placeholder="Ex.: Casa">
+  </div>
+  <div class="col-3">
+    <label for="inputCountry" class="form-label">País</label>
+    <input name="pais" type="text" class="form-control" id="inputContry" placeholder="Ex.: Brasil">
+  </div>
+  <div class="col-3">
+    <label for="inputState" class="form-label">Estado</label>
+    <input name="estado" type="text" class="form-control" id="inputState" placeholder="Ex.: Ceará">
+  </div>
+  <div class="col-3">
+    <label for="inputCity" class="form-label">Cidade</label>
+    <input name="cidade" type="text" class="form-control" id="inputCity" placeholder="Ex.: Fortaleza">
+  </div>
+  <div class="col-md-3">
+    <label for="inputCep" class="form-label">CEP</label>
+    <input name="cep" type="text" onkeypress="$(this).mask('00000-0000');" class="form-control" id="inputCep"
+      placeholder="00000-000">
+  </div>
+  <div class="col-md-3">
+    <label for="inputPassword" class="form-label">Senha</label>
+    <input name="senha" type="password" class="form-control" id="inputPassword" placeholder="*****">
+  </div>
+  <div class="col-md-3">
+    <label for="inputPassword2" class="form-label">Repita a senha</label>
+    <input name="senha2" type="password" class="form-control" id="inputPassword2" placeholder="*****">
+  </div>
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </div>
+</form>
