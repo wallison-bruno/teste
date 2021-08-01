@@ -4,22 +4,14 @@ const app = express();
 const bodyparser = require('body-parser')
 const handlebars = require('express-handlebars')
 const path = require('path') //Serve para trabalhar com diretórios
-//const { create } = require("domain")
-
 const session = require('express-session')
 const bcrypt = require('bcryptjs')
-
 const connectflash = require('connect-flash')
-
 const passport = require('passport')
 require("./config/auth")(passport)
-
+const authGuithub = require('./config/authGithub')
 const { autenticado } = require('./helpers/adminVerification')
-
-//const emailVerif = require('./helpers/emailVerif')
-
 const User = require('./models/User');
-const { use } = require("passport");
 
 /*COMFICURAÇÕES*/
 
@@ -36,6 +28,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+authGuithub()
 //flash
 app.use(connectflash())
 
@@ -58,6 +51,16 @@ app.use(bodyparser.json())
 
 //public
 app.use(express.static(path.join(__dirname, "public")))
+
+// GitHub 
+app.get('/auth/github',
+    passport.authenticate('github'));
+
+app.get('/auth/github/callback',
+    passport.authenticate('github', { failureRedirect: '/login' }),
+    function (req, res) {
+        res.redirect('/');
+    });
 
 /* ROTAS */
 app.get('/', function (req, res) {

@@ -1,12 +1,16 @@
 const User = require('../models/User')
 
+User.findOrCreate({
+  where: { id: 63119956 },
+  defaults: {
+    nome: 'qual quer nome'
+  }
+}).then((user) => {
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + user)
 
-
-User.findByPk(50).then((user) => {
-  (async () => {
-    console.log(user)
-  })();
 });
+
+
 
 
 
