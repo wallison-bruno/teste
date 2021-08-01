@@ -1,6 +1,7 @@
 # Teste.com
 
-<h3>Aprasentação de sistema de cadastro</h3>
+<h3>Aprasentação de sistema de cadastro 
+    <h4>Login com conta local e GuitHub:</h4>
 
-  ![adfasdfasd](https://user-images.githubusercontent.com/63119956/127755248-584a222b-dee3-43cd-90b4-9896e5c137d8.gif)
-  ![eqweqwe](https://user-images.githubusercontent.com/63119956/127755247-0b7ba179-20e9-4a23-ba57-ed574346890a.gif)
+  ![123123](https://user-images.githubusercontent.com/63119956/127781170-5d9c4209-9387-4eb9-8265-19d95a0f6261.gif)
+
